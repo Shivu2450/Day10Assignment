@@ -1,23 +1,10 @@
 package com.example.travel;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Configuration
+@Component("com.example.travel")
 public class AppConfig {
-	@Bean
-	public FlightBooking flightBooking() {
-		return new FlightBooking();
 
-	}
-
-	@Bean
-	public TrainBooking trainBooking() {
-		return new TrainBooking();
-	}
-
-	@Bean
-	public TravelBookingService trainBookingService() {
-		return new TravelBookingService(flightBooking(), trainBooking());
-	}
 }

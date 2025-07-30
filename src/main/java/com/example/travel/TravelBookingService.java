@@ -1,7 +1,13 @@
 package com.example.travel;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class TravelBookingService {
+	@Autowired
 	private final FlightBooking flightBooking;
+	@Autowired
 	private final TrainBooking trainBooking;
 
 	public TravelBookingService(FlightBooking flightBooking, TrainBooking trainBooking) {
